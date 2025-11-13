@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://c63llpaj8sfk7"]
+
+[ext_resource type="Texture2D" uid="uid://brfllx0aptm56" path="res://characterstuff/NPC_art.png" id="1_mvaj2"]
+[ext_resource type="Script" uid="uid://7yscm7m8pwd0" path="res://clicktgt.gd" id="2_5ihuc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_watoc"]
+size = Vector2(16, 16)
+
+[node name="Sprite2D" type="Sprite2D"]
+texture = ExtResource("1_mvaj2")
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("2_5ihuc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_watoc")

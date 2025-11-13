@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=3 uid="uid://dmxwwy4lvjxgb"]
+
+[ext_resource type="Script" uid="uid://by4fjwxiglfxw" path="res://npc.gd" id="1_ll5ud"]
+[ext_resource type="Texture2D" uid="uid://brfllx0aptm56" path="res://characterstuff/NPC_art.png" id="1_twre2"]
+[ext_resource type="Script" uid="uid://b7sy4g6musq80" path="res://NPCarea.gd" id="3_u1jv5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ll5ud"]
+size = Vector2(16, 16)
+
+[node name="NPC" type="CharacterBody2D"]
+script = ExtResource("1_ll5ud")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_twre2")
+
+[node name="Area2D" type="Area2D" parent="Sprite2D"]
+script = ExtResource("3_u1jv5")
+
+[node name="Area2D_Definer" type="CollisionShape2D" parent="Sprite2D/Area2D"]
+shape = SubResource("RectangleShape2D_ll5ud")
+
+[node name="up" type="RayCast2D" parent="."]
+position = Vector2(0, -8)
+target_position = Vector2(0, -8)
+
+[node name="down" type="RayCast2D" parent="."]
+position = Vector2(0, 8)
+target_position = Vector2(0, 8)
+
+[node name="left" type="RayCast2D" parent="."]
+position = Vector2(-8, 0)
+target_position = Vector2(-8, 0)
+
+[node name="right" type="RayCast2D" parent="."]
+position = Vector2(8, 0)
+target_position = Vector2(8, 0)
+
+[node name="Timer" type="Timer" parent="."]
+process_callback = 0
+wait_time = 2.0
+autostart = true
+
+[node name="NPC_Collision" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ll5ud")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
