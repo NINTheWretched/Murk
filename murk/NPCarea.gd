@@ -13,3 +13,4 @@ func _input_event(_viewport, event, _shape_idx):
 		print ("Click!")
 		if health <= 0:
 			print("Dead!")
+			queue_free()
