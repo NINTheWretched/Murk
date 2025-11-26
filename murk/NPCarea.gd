@@ -13,4 +13,6 @@ func _input_event(_viewport, event, _shape_idx):
 		print ("Click!")
 		if health <= 0:
 			print("Dead!")
-			queue_free()
+			get_parent().get_parent().queue_free()
+
+#func _area_combat(area: Area2D) -> void:
