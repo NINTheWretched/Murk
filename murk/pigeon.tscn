@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=3 uid="uid://bkfmhj28p36i2"]
+
+[ext_resource type="Script" uid="uid://dgpndw353dx0n" path="res://scripts/pigeon.gd" id="1_p3npc"]
+[ext_resource type="Texture2D" uid="uid://cpahk31attqli" path="res://characterstuff/pigeon.png" id="2_vw3md"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h26hx"]
+size = Vector2(16, 16)
+
+[node name="Pigeon" type="CharacterBody2D"]
+script = ExtResource("1_p3npc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_vw3md")
+
+[node name="Move" type="Timer" parent="."]
+process_callback = 0
+wait_time = 6.0
+autostart = true
+
+[node name="up" type="RayCast2D" parent="."]
+position = Vector2(0, -8)
+target_position = Vector2(0, -8)
+
+[node name="down" type="RayCast2D" parent="."]
+position = Vector2(0, 8)
+target_position = Vector2(0, 8)
+
+[node name="left" type="RayCast2D" parent="."]
+position = Vector2(-8, 0)
+target_position = Vector2(-8, 0)
+
+[node name="right" type="RayCast2D" parent="."]
+position = Vector2(8, 0)
+target_position = Vector2(8, 0)
+
+[node name="NPC_Collision" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_h26hx")
+
+[connection signal="timeout" from="Move" to="." method="_on_move_timeout"]
