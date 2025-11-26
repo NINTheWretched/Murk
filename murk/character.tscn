@@ -38,5 +38,5 @@ hit_from_inside = true
 
 [node name="MovementCooldown" type="Timer" parent="."]
 process_callback = 0
-wait_time = 0.1
+wait_time = 0.11
 one_shot = true
