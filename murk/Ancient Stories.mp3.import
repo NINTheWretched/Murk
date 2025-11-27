@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bs0xtrbn403ic"
+path="res://.godot/imported/Ancient Stories.mp3-e5745fe53925c6e9678c2e3ebf0c7850.mp3str"
+
+[deps]
+
+source_file="res://Ancient Stories.mp3"
+dest_files=["res://.godot/imported/Ancient Stories.mp3-e5745fe53925c6e9678c2e3ebf0c7850.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

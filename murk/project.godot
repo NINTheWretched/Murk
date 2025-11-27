@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Murk"
-run/main_scene="uid://bidwr73q2g3jm"
+run/main_scene="uid://kjk7psn1jasp"
 config/features=PackedStringArray("4.5", "Forward Plus")
 
 [display]
