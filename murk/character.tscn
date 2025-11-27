@@ -6,14 +6,14 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pjt0s"]
 size = Vector2(16, 16)
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[node name="CharacterBody2D" type="CharacterBody2D" groups=["Player"]]
 script = ExtResource("1_pjt0s")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
 texture = ExtResource("1_glpr6")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="Character_Collision" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_pjt0s")
 
 [node name="up" type="RayCast2D" parent="."]
