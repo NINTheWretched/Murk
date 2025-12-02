@@ -19,9 +19,7 @@ func _physics_process(_delta: float) -> void:
 		elif Input.is_action_pressed("ui_right") and !$right.is_colliding():
 			_move(Vector2(1, 0))
 			MovementCooldown.start(MovementCooldown.wait_time)
-		
 #timer node if timer node.time =0 can input something
 #once something is input reset timer
-
 func _move(dir: Vector2):
 	global_position += dir * tile_size

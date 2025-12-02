@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cel13n1o3nosk"
+path="res://.godot/imported/Witch Waltz.mp3-ebf746edc4ddc384705197c9b91ab521.mp3str"
+
+[deps]
+
+source_file="res://Witch Waltz.mp3"
+dest_files=["res://.godot/imported/Witch Waltz.mp3-ebf746edc4ddc384705197c9b91ab521.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
