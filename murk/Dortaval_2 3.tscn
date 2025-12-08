@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://1t27clxui68s"]
+[gd_scene load_steps=11 format=4 uid="uid://k85h8paqeahx"]
 
 [ext_resource type="AudioStream" uid="uid://cel13n1o3nosk" path="res://Witch Waltz.mp3" id="1_gopvi"]
 [ext_resource type="Texture2D" uid="uid://dhv3c24jve1o" path="res://tile art/CP437(W).png" id="1_tvfhn"]
@@ -547,7 +547,7 @@ tile_map_data = PackedByteArray("AAArAP//AAAJAAEAAAAsAAAAAAALAAEAAAAAAP//AAAJAAE
 tile_set = SubResource("TileSet_fj6e6")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_xhwsc")]
-position = Vector2(360, 40)
+position = Vector2(344, 40)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 position = Vector2(8, 0)

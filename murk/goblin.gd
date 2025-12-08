@@ -1,5 +1,5 @@
 extends CharacterBody2D
-class_name NPC
+class_name Enemy
 
 const tile_size: Vector2 = Vector2(16, 16)
 
@@ -7,10 +7,10 @@ var rng = RandomNumberGenerator.new()
 var health = 3
 
 func _on_timer_timeout():
-	print ("tick")
+	print ("goblin tick")
 	rng.randomize()
 	var random_int = rng.randi_range(1, 4)
-	print("Int:", random_int)
+	print("goblin move:", random_int)
 	if random_int == 1 and !$up.is_colliding():
 		_move(Vector2(0, -1))
 	elif random_int == 2 and !$down.is_colliding():

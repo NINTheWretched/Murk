@@ -20,18 +20,22 @@ autostart = true
 [node name="up" type="RayCast2D" parent="."]
 position = Vector2(0, -8)
 target_position = Vector2(0, -8)
+collide_with_areas = true
 
 [node name="down" type="RayCast2D" parent="."]
 position = Vector2(0, 8)
 target_position = Vector2(0, 8)
+collide_with_areas = true
 
 [node name="left" type="RayCast2D" parent="."]
 position = Vector2(-8, 0)
 target_position = Vector2(-8, 0)
+collide_with_areas = true
 
 [node name="right" type="RayCast2D" parent="."]
 position = Vector2(8, 0)
 target_position = Vector2(8, 0)
+collide_with_areas = true
 
 [node name="NPC_Collision" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_h26hx")

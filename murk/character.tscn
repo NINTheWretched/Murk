@@ -16,25 +16,33 @@ texture = ExtResource("1_glpr6")
 [node name="Character_Collision" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_pjt0s")
 
+[node name="attack" type="RayCast2D" parent="."]
+target_position = Vector2(0, 16)
+collide_with_areas = true
+
 [node name="up" type="RayCast2D" parent="."]
 position = Vector2(0, -8)
 target_position = Vector2(0, -8)
 hit_from_inside = true
+collide_with_areas = true
 
 [node name="down" type="RayCast2D" parent="."]
 position = Vector2(0, 8)
 target_position = Vector2(0, 8)
 hit_from_inside = true
+collide_with_areas = true
 
 [node name="left" type="RayCast2D" parent="."]
 position = Vector2(-8, 0)
 target_position = Vector2(-8, 0)
 hit_from_inside = true
+collide_with_areas = true
 
 [node name="right" type="RayCast2D" parent="."]
 position = Vector2(8, 0)
 target_position = Vector2(8, 0)
 hit_from_inside = true
+collide_with_areas = true
 
 [node name="MovementCooldown" type="Timer" parent="."]
 process_callback = 0

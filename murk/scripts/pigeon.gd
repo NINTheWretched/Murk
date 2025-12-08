@@ -4,11 +4,8 @@ const tile_size: Vector2 = Vector2(16, 16)
 
 var rng = RandomNumberGenerator.new()
 
-#func _ready() -> void:
-	#queue_free()
-
 func _on_move_timeout():
-	print ("tick")
+	print (" pigeon tick")
 	rng.randomize()
 	var random_int = rng.randi_range(1, 4)
 	print("Int:", random_int)

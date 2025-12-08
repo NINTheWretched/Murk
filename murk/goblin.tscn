@@ -1,17 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://dmxwwy4lvjxgb"]
+[gd_scene load_steps=4 format=3 uid="uid://cmduu6lwfjdg5"]
 
-[ext_resource type="Script" uid="uid://by4fjwxiglfxw" path="res://scripts/npc.gd" id="1_ll5ud"]
-[ext_resource type="Texture2D" uid="uid://brfllx0aptm56" path="res://characterstuff/NPC_art.png" id="1_twre2"]
+[ext_resource type="Script" uid="uid://o525h0tdrxr3" path="res://goblin.gd" id="1_vu5tg"]
+[ext_resource type="Texture2D" uid="uid://qgmoqv6gm8eq" path="res://characterstuff/goblin.png" id="2_macxp"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ll5ud"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3s2j4"]
 size = Vector2(16, 16)
 
-[node name="NPC" type="CharacterBody2D"]
-script = ExtResource("1_ll5ud")
+[node name="Goblin" type="CharacterBody2D"]
+script = ExtResource("1_vu5tg")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture_filter = 1
-texture = ExtResource("1_twre2")
+texture = ExtResource("2_macxp")
 
 [node name="up" type="RayCast2D" parent="."]
 position = Vector2(0, -8)
@@ -39,6 +38,6 @@ wait_time = 2.0
 autostart = true
 
 [node name="NPC_Collision" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_ll5ud")
+shape = SubResource("RectangleShape2D_3s2j4")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
